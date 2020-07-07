@@ -1,0 +1,34 @@
+class person:
+  def __init__(self, name, age):
+    self.age = age
+    self.name = name
+  
+  def say_hello(self, to_name):
+    print("안녕"+to_name+"아?, 나는"+self.name + self.age +"살")
+    
+  def introduce(self):
+    print("나는"+self.name + str(self.age) +"살")
+jonghyun = person("jonghyun",17)
+jaehyun = person("jaehyun",18)
+sunwoo = person("sunwoo",19)
+
+
+jaehyun.introduce()
+jonghyun.introduce()
+
+
+###inheritance 상속 받은거 안에 있는 함수 다 쓸 수 있 
+
+class police(person):
+  def arrest(self, to_arrest):
+    print("you are under arrest " + to_arrest)
+    
+class programmer(person):
+  def program(self,to_program):
+    print("다음에는 뭘 만들지??" + to_program)
+    
+michael = programmer("michael", 20)
+jennie = police("jennie", 20)
+michael.introduce()
+jennie.introduce()
+jennie.arrest("jonghyun")
